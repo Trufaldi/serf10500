@@ -1,0 +1,30 @@
+.fancybox-is-open .fancybox-bg {
+    background: #313131;
+    opacity: 1;
+}
+
+.modal__container {
+    background: white;
+    padding: 37px 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__content {
+    margin-bottom: rem(18px);
+}
+
+.button {
+    border: none;
+    display: inline-block;
+}
+
+.modal {
+    display: none;
+    padding: 0;
+}
+
+.modal-error {
+    color: red;
+}

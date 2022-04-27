@@ -1,0 +1,117 @@
+.command__team {
+    display: flex;
+    align-items: flex-start;
+}
+
+ul.command__team {
+    min-height: rem(500px);
+}
+
+.command__team--dekstop {
+    @include tablets {
+        display: none;
+    }
+}
+
+.command__team--mobile {
+    display: none;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.command__person-photo {
+    width: rem(220px);
+    height: rem(290px);
+    margin-bottom: rem(21px);
+    @include tablets {
+        margin: 0 auto rem(21px);
+    }
+    @include phone {
+        width: rem(138px);
+        height: rem(180px)
+    }
+}
+
+.command__person {
+    margin-right: rem(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:last-child {
+        margin-right: 0;
+    }
+    @include tablets {
+        margin-right: 0;
+    }
+    &.active .command__person-name:after {
+        transform: rotate(180deg);
+    }
+}
+
+.command__person-name {
+    font-weight: bold;
+    font-size: rem(21px);
+    margin-bottom: rem(8px);
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    &:after {
+        content: "";
+        width: rem(9px);
+        height: rem(9px);
+        background: url(../img/symbol.png) center center / cover no-repeat;
+        margin-left: rem(4px);
+    }
+}
+
+.command__person-name .active {
+    &:after {
+        content: "";
+        width: rem(9px);
+        height: rem(9px);
+        background: url(../img/symbol.png) center center / cover no-repeat;
+        margin-left: rem(4px);
+        transform: rotate(180deg);
+    }
+}
+
+.command__person-specification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s;
+}
+
+.command__person-block {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    @include tablets {
+        position: static;
+    }
+}
+
+.command__person-proffe {
+    margin-bottom: rem(4px);
+}
+
+.command__person-description {
+    text-align: center;
+    color: #666666;
+    padding-bottom: rem(10px);
+}
+
+.command__person-pic {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

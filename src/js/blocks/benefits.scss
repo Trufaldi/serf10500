@@ -1,0 +1,106 @@
+.benefits__list {
+    display: flex;
+    @include phone {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.benefits__main-title {
+    margin-bottom: rem(17px);
+    @include phone {
+        margin-bottom: rem(10px);
+    }
+}
+
+.benefits__item {
+    position: relative;
+    flex: 1;
+    margin: 0 2.1%;
+    text-align: center;
+    @include phone {
+        margin: 0;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        margin-bottom: rem(20px);
+        align-items: flex-start;
+        padding-top: rem(4px);
+    }
+    &:before {
+        content: url("../img/Combined shape 2204.png");
+        position: absolute;
+        top: rem(30px);
+        right: 0;
+        transform: translate(76%, 105%);
+        @include phone {
+            display: none;
+        }
+    }
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.benefits__img {
+    display: inline-block;
+    width: rem(128px);
+    height: rem(128px);
+    position: relative;
+    background: #F2F5F4;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: rem(20px);
+    @include tablets {
+        margin-bottom: rem(16px);
+    }
+    @include phone {
+        flex-shrink: 0;
+    }
+}
+
+.benefit__icon {
+    width: rem(68px);
+    height: rem(68px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.benefits__text {
+    color: #666666;
+    font-size: rem(18px);
+    line-height: rem(21px);
+}
+
+.benefits__headline {
+    margin-bottom: rem(50px);
+    @include phone {
+        margin-bottom: rem(56px);
+    }
+}
+
+.benefits__title {
+    font-size: rem(27px);
+    font-weight: bold;
+    margin-bottom: rem(20px);
+    @include tablets {
+        margin-bottom: rem(10px);
+    }
+    @include phone {
+        margin-bottom: 10px;
+    }
+}
+
+.benefits__text-wrap {
+    @include phone {
+        padding-left: 12px;
+    }
+}

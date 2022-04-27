@@ -1,0 +1,17 @@
+.headline__title {
+    margin-bottom: rem(17px);
+}
+
+.title__header {
+    text-transform: uppercase;
+}
+
+.title {
+    text-align: center;
+}
+
+.headline__subtitle {
+    @include phone {
+        line-height: rem(21.6px);
+    }
+}

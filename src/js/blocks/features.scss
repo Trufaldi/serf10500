@@ -1,0 +1,27 @@
+.features__list {
+    display: flex;
+    margin-bottom: rem(65px);
+    @include tablets {
+        display: none;
+    }
+}
+
+.feature {
+    margin-right: rem(30px);
+    display: flex;
+    align-items: center;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.feature__icon {
+    width: rem(41px);
+    height: rem(41px);
+    margin-right: rem(11px);
+}
+
+.list__feature-text {
+    font-size: rem(18px);
+    max-width: rem(90px);
+}
