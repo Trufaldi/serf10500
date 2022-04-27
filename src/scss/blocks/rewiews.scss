@@ -1,0 +1,77 @@
+.user__rewiew {
+    background: #F8FAF9;
+    padding: rem(42px) rem(142px) rem(42px) rem(42px);
+    display: flex;
+    margin-bottom: rem(16px);
+    position: absolute;
+    opacity: 0;
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: rem(57px) rem(10px) rem(46px) rem(10px);
+        margin-bottom: rem(31px);
+    }
+}
+
+.user__rewiew--active {
+    position: static;
+    opacity: 1;
+}
+
+.rewiew__avatar {
+    width: rem(254px);
+    height: rem(264px);
+    align-items: center;
+    @include tablets {
+        width: rem(130px);
+        height: rem(130px);
+    }
+}
+
+.user__rewiew-photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.rewiew__list {
+    flex: 1;
+    margin-left: rem(35px);
+    padding-top: rem(28px);
+    @include tablets {
+        margin-left: 0;
+    }
+}
+
+.rewiew__title {
+    font-size: rem(27px);
+    font-weight: bold;
+    margin-bottom: rem(16px);
+}
+
+.rewiew__text {
+    font-size: rem(18px);
+    color: #666666;
+    line-height: rem(22px);
+    margin-bottom: rem(25px);
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+}
+
+.rewiew__signature {
+    font-size: rem(18px);
+    font-weight: bold;
+}
+
+.rewiews__main-title {
+    margin-bottom: rem(34px);
+}
+
+.user {
+    margin-right: rem(6px);
+    &:last-child {
+        margin-right: 0;
+    }
+}

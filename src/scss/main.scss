@@ -1,0 +1,8 @@
+$baseFontSize: 18px;
+$containerWidth: 940px;
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+@import 'blocks/layout/media';
+@import 'blocks/layout/base';
+@import 'blocks/*.scss';

@@ -1,0 +1,32 @@
+.button {
+    font-size: rem(16px);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: rem(21px) rem(41px);
+    border-radius: rem(100px);
+    background: #FEDB3F;
+    border: none;
+    @include phone {
+        font-size: rem(19px);
+        padding: rem(18px) rem(36px);
+    }
+}
+
+.button--theme--yellow {
+    margin-right: rem(22px);
+}
+
+.button--theme--transparent {
+    background: none;
+    padding: 0px;
+    color: white;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.form__btns {
+    @include tablets {
+        display: flex;
+        justify-content: center;
+    }
+}

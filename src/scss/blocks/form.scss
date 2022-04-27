@@ -1,0 +1,149 @@
+.forms {
+    display: flex;
+    background: url("../img/serfer.jpg") center center/cover no-repeat;
+    color: white;
+}
+
+form {
+    display: flex;
+    @include tablets {
+        flex-direction: column;
+        padding: 0 19%;
+    }
+    @include phone {
+        padding: 0;
+    }
+}
+
+.form__col {
+    flex: 1;
+    margin-right: rem(26px);
+    &:last-child {
+        margin-right: 0;
+    }
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(13px);
+    &--comment {
+        margin-bottom: rem(38px);
+        @include tablets {
+            margin-bottom: rem(24px);
+        }
+    }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(16px);
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__title {
+    line-height: rem(21.6px);
+    margin-bottom: rem(2px);
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    padding: rem(18px) rem(12px) rem(19px) rem(12px);
+    outline: 3px solid transparent;
+    border-radius: 4px;
+    &--textarea {
+        height: rem(152px);
+        resize: none;
+        display: block;
+        @include tablets {
+            height: rem(82px);
+        }
+    }
+    &:focus {
+        outline-color: #FEDB3F;
+    }
+    @include tablets {
+        padding: rem(8px) rem(10px);
+    }
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    @include phone {
+        justify-content: center;
+        margin-bottom: rem(23px);
+    }
+}
+
+.form__controls-group {
+    margin-bottom: rem(44px);
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 18px;
+}
+
+.radio__elem {
+    display: none;
+    margin-right: 10px;
+    &:checked~.radio__visible {
+        &::before {
+            display: block;
+        }
+    }
+}
+
+.radio__title {
+    line-height: 24px;
+}
+
+.radio__visible {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    margin-right: 10px;
+    &:before {
+        content: "";
+        width: rem(13px);
+        height: rem(13px);
+        background: #FEDB3F;
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+}
+
+.title__header--forms-main-title {
+    margin-bottom: rem(60px);
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+}
+
+.radio--checkbox {
+    .radio__visible {
+        border-radius: rem(4px);
+        &:before {
+            background: url(../img/checkmark.png) center center/ rem(10px) no-repeat;
+        }
+    }
+}
+
+.input-error {
+    outline-color: hotpink;
+}
